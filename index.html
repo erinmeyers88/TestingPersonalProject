@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="skyNautilus">
 
 <head>
     <meta charset="UTF-8">
     <title>Test</title>
+    <link href="node_modules/angularjs-datepicker/src/css/angular-datepicker.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body ng-controller="homeCtrl">
     <header></header>
     <div class="backgroundImage"></div>
     <div class="formBackground">
@@ -25,29 +26,33 @@
 
             <label>
                 <span>Destination:</span>
-                <input id="name" type="destination" name="name" placeholder="Destination" />
+                <input id="name" type="destination" name="name"/>
             </label>
-
-
-
-         
 
             <label>
                 <span>Departure Date:</span>
-                <input id="email" type="email" name="email" placeholder="Valid Email Address" />
+                <datepicker date-year-title="selected title" date-format="MMM d, y">
+                    <input ng-model="date" type="email"/>
+                </datepicker>
             </label>
 
-            <label>
+             <label>
                 <span>Return Date:</span>
-                <input id="email" type="email" name="email" placeholder="Valid Email Address" />
+                <datepicker date-year-title="selected title" date-format="MMM d, y">
+                    <input ng-model="date" type="email"/>
+                </datepicker>
             </label>
-
-
 
             <label>
                 <span>Passengers:</span>
-                <input id="email" type="email" name="email" placeholder="Valid Email Address" />
+                <select name="selection">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
             </label>
+
 
 
             <label>
@@ -57,6 +62,12 @@
         </form>
     </div>
     <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="homeCtrl.js"></script>
+    <script src="node_modules/angularjs-datepicker/src/js/angular-datepicker.js"></script>
 </body>
 
 </html>

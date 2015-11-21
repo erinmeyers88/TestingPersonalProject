@@ -16,18 +16,13 @@ header {
 	width: 100%;
 	background-image: url("nautilus2.jpg");
 	background-size: cover;
-	/*background-repeat: no-repeat; */
 	position: relative;
 
 }
 
 .formBackground {
-	border: 2px solid white;
 	border-radius: 5px;
-	border-style: ridge;
 	position: absolute;
-	/*height: 400px;
-	width: 500px;*/
 	top: 155px;
 	left: 60px;
 	background-color: rgba(255, 255, 255, .3)
@@ -71,7 +66,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
-    padding-left: 5px;
 }
 
 .radioButtons label{
